@@ -68,6 +68,8 @@ This GitHub repository contains the code and configuration for a data engineerin
     - Use Glue Studio to create a job with two source S3 buckets and an inner join transformation.
 2. Create Target S3 Bucket:
     - Set up a new S3 bucket for the final analysis.
+  
+<img src="pics/ETL Job.png">
 3. Save and Run Job:
     - Save and execute the Glue Studio job for reporting purposes.
 
