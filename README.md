@@ -15,6 +15,10 @@ This GitHub repository contains the code and configuration for a data engineerin
 1. Create [AWS Account](https://repost.aws/knowledge-center/create-and-activate-aws-account) - Set default AZ to North Virginia (us-east-1).
 2. Download and Set Up [AWS CLI](https://aws.amazon.com/cli/): Install AWS CLI and configure it. 
 3. Download Kaggle YouTube Data - Download the [Kaggle YouTube data](https://www.kaggle.com/datasets/datasnaek/youtube-new) and place it in a dedicated project folder.
+
+## Arcitecture Diagram
+<img src="pics/Arcitecture.png">
+
 ## Part 1: Create IAM Account for Project
 1. Create IAM User:
     - Create a user with access key and console access, attach AdministratorAccess policy.
@@ -72,7 +76,14 @@ This GitHub repository contains the code and configuration for a data engineerin
 <img src="pics/ETL Job.png">
 3. Save and Run Job:
     - Save and execute the Glue Studio job for reporting purposes.
+    
+## Part 7: Create Simple Dashboard with AWS QuickSight
+1. Sign up for a Standard QuickSight Account.
+2. Create a new DataSource using Athena.
+3. Connect to the database and table created during ETL.
+4. Build a sample dashboard using the final cleaned data.
 
-
+## Final Output Dashboard
+<img src="pics/Dashboard.png">
 
 
