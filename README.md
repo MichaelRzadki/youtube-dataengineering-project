@@ -11,13 +11,29 @@ This GitHub repository contains the code and configuration for a data engineerin
 5. Cloud Compute: Utilize AWS for processing vast amounts of data.
 6. Reporting: Build a dashboard to extract insights from the processed data.
 
+## Serivces Used
+### 1. AWS IAM (Identity and Access Management):
+   - Manage access by creating a user with AdministratorAccess, enabling access keys and console access, and logging in via AWS CLI.
+### 2. Amazon S3 (Simple Storage Service):
+   - Create an S3 Bucket for raw data, upload JSON and CSV files, serving as storage for raw statistics.
+### 3. AWS Glue:
+   - Set up IAM role for Glue Crawler, extract data from S3 using Glue Crawler, and transform CSV to Parquet with ETL Job.
+### 4. Amazon Athena:
+   - Utilize Athena to view data from Glue catalog tables and configure settings for query result storage in an S3 bucket.
+### 5. AWS Lambda:
+   - Develop a Lambda function in Python 3.8 for cleaning and transforming data into Parquet, triggered by new information in the raw S3 bucket.
+### 6. AWS Glue Studio:
+   - Use Glue Studio to create an ETL pipeline, performing an inner join transformation on data sources and storing results in a new S3 bucket.
+### 7. AWS QuickSight:
+   - Sign up for QuickSight, create a DataSource using Athena to connect with ETL-created database, and build a sample dashboard.
+
 ## Pre-Rec Setup
 1. Create [AWS Account](https://repost.aws/knowledge-center/create-and-activate-aws-account) - Set default AZ to North Virginia (us-east-1).
 2. Download and Set Up [AWS CLI](https://aws.amazon.com/cli/): Install AWS CLI and configure it. 
 3. Download Kaggle YouTube Data - Download the [Kaggle YouTube data](https://www.kaggle.com/datasets/datasnaek/youtube-new) and place it in a dedicated project folder.
 
-## Arcitecture Diagram
-<img src="pics/Arcitecture.png">
+## Architecture Diagram
+<img src="pics/Architecture.png">
 
 ## Part 1: Create IAM Account for Project
 1. Create IAM User:
